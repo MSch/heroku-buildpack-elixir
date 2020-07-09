@@ -5,7 +5,7 @@ function download_elixir() {
   if [ ${force_fetch} = true ] || [ ! -f ${cache_path}/$(elixir_download_file) ]; then
     clean_elixir_downloads
     elixir_changed=true
-    local otp_version=$(otp_version ${erlang_version})
+    local otp_version=22
 
     local download_url="https://repo.hex.pm/builds/elixir/${elixir_version}-otp-${otp_version}.zip"
 
